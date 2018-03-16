@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/layouttop"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/bg_grid_or_list"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewGrid"
+            android:text="Grid"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:padding="4dp"
+            android:background="@color/blue"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textViewList"
+            android:text="List"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:padding="4dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutsecond"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_below="@id/layouttop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/keyEditText"
+            android:layout_marginLeft="6dp"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:padding="4dp"
+            android:paddingLeft="6dp"
+            android:drawablePadding="6dp"
+            android:drawableLeft="@drawable/ic_action_search"
+            android:background="@drawable/search_bg"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+
+            />
+        <Button
+            android:id="@+id/buttonDone"
+            android:text="Done"
+            android:textColor="@color/blue"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/search_bg"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="30dp" />
+    </LinearLayout>
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progerssBar"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/layoutsecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginRight="6dp"
+        android:visibility="gone"
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/layoutsecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
